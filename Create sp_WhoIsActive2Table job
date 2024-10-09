@@ -33,7 +33,7 @@ EXEC  msdb.dbo.sp_add_job @job_name=N'DBA - sp_BlitzWho2Table',
 		@owner_login_name=N'D_BZAAV\prvarielfe', @job_id = @jobId OUTPUT
 select @jobId
 GO
-EXEC msdb.dbo.sp_add_jobserver @job_name=N'DBA - sp_BlitzWho2Table', @server_name = N'ISLPDBCGEN01'
+EXEC msdb.dbo.sp_add_jobserver @job_name=N'DBA - sp_BlitzWho2Table', @server_name = @@SERVERNAME
 GO
 USE [msdb]
 GO
